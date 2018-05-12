@@ -1,9 +1,9 @@
 public class Item {
-    String r030;
-    String txt;
-    double rate;
-    String cc;
-    String exchangeDate;
+    private String r030;
+    private String txt;
+    private double rate;
+    private String cc;
+    private String exchangeDate;
 
     public Item() {
     }
