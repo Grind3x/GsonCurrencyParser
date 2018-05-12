@@ -3,17 +3,17 @@ public class Item {
     String txt;
     double rate;
     String cc;
-    String exchangedate;
+    String exchangeDate;
 
     public Item() {
     }
 
-    public Item(String r030, String txt, double rate, String cc, String exchangedate) {
+    public Item(String r030, String txt, double rate, String cc, String exchangeDate) {
         this.r030 = r030;
         this.txt = txt;
         this.rate = rate;
         this.cc = cc;
-        this.exchangedate = exchangedate;
+        this.exchangeDate = exchangeDate;
     }
 
     public String getR030() {
@@ -48,11 +48,11 @@ public class Item {
         this.cc = cc;
     }
 
-    public String getExchangedate() {
-        return exchangedate;
+    public String getExchangeDate() {
+        return exchangeDate;
     }
 
-    public void setExchangedate(String exchangedate) {
-        this.exchangedate = exchangedate;
+    public void setExchangeDate(String exchangeDate) {
+        this.exchangeDate = exchangeDate;
     }
 }
