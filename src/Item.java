@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Item {
     private String r030;
     private String txt;
@@ -54,5 +56,34 @@ public class Item {
 
     public void setExchangeDate(String exchangeDate) {
         this.exchangeDate = exchangeDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Item item = (Item) o;
+        return Double.compare(item.rate, rate) == 0 &&
+                Objects.equals(r030, item.r030) &&
+                Objects.equals(txt, item.txt) &&
+                Objects.equals(cc, item.cc) &&
+                Objects.equals(exchangeDate, item.exchangeDate);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(r030, txt, rate, cc, exchangeDate);
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "r030='" + r030 + '\'' +
+                ", txt='" + txt + '\'' +
+                ", rate=" + rate +
+                ", cc='" + cc + '\'' +
+                ", exchangeDate='" + exchangeDate + '\'' +
+                '}';
     }
 }
